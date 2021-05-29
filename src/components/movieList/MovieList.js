@@ -1,21 +1,22 @@
 import React from 'react'
 import MovieCard from '../movieCard/MovieCard'
 import PropTypes from 'prop-types';
+import './MovieList.css';
 
 const MovieList = ({Movie}) => {
     return (
-        <div className="container">
-            <div className="row ml-5">
-            { Movie.map((movies,index )=> <MovieCard key={movies.id} movies={movies} />)}
+        
+            <div className="wrapper">
+            { Movie.map((Movies)=> <MovieCard key={Movies.id} Movies={Movies} />)}
             </div>
-        </div>
+        
     );
 };
 MovieList.propTypes = {
-    movie: PropTypes.array
+    Movie: PropTypes.array
 }
 MovieList.defaultProps = {
-    movie: []
+    Movie: []
 };
 
 export default MovieList
